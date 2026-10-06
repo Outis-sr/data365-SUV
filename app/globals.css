@@ -846,7 +846,6 @@ h6 {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 360px;
   padding: 24px;
   border-radius: 20px;
   overflow: hidden;
@@ -866,11 +865,14 @@ h6 {
   gap: 8px;
   padding-bottom: 24px;
 }
+/* the art slot holds a DATA365 SUV product panel (components/showcase, frame="bare"); cards in a
+   row stretch to the tallest, and the panel fills what is left under the copy */
 .feat-card__art {
-  margin-top: auto;
-  align-self: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 280px;
+  min-height: 0;
 }
 .inline-svg {
   display: block;
@@ -881,36 +883,36 @@ h6 {
   width: 100%;
   height: auto;
 }
+/* tablet: the product panels need room, so the top row is 2 + 1 (third card full width) and the
+   two wide cards stack; desktop keeps the reference 3 + 2 grid */
 @media (min-width: 810px) {
-  .feat-row--3,
+  .feat-row--3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .feat-row--3 > :nth-child(3) {
+    grid-column: span 2;
+  }
+  .feat-row > * {
+    min-width: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .feat-row--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .feat-row--3 > :nth-child(3) {
+    grid-column: auto;
+  }
   .feat-row--2 {
     flex-direction: row;
   }
   .feat-row > * {
     flex: 1 1 0;
-    min-width: 0;
-    height: 340px;
   }
-}
-@media (min-width: 1200px) {
-  .feat-row--3 > * {
-    height: 360px;
-    padding: 32px;
-  }
+  .feat-row--3 > *,
   .feat-row--2 > * {
-    height: 240px;
-    padding: 32px;
-    flex-direction: row;
-    align-items: center;
-  }
-  .feat-row--2 .feat-card__content {
-    flex: 1 1 0;
-    padding: 0 24px 0 0;
-  }
-  .feat-row--2 .feat-card__art {
-    margin: 0;
-    width: 237px;
-    flex: none;
+    padding: 28px;
   }
 }
 
@@ -1158,6 +1160,213 @@ h6 {
   }
   .proc-card:first-child {
     top: 120px;
+  }
+}
+
+/* ------------------------------ Product showcase sections ------------------------------ */
+/* Delivery (map + route story), Operations (alternating rows) and AI (sticky copy). The product
+   UI itself lives in app/showcase.css. */
+.ps-band {
+  background: linear-gradient(180deg, #fff 0%, #f7f9fc 18%, #f7f9fc 82%, #fff 100%);
+}
+.ps-kicker {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #1769e0;
+}
+.ps-title {
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.ps-points {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.ps-points li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.ps-points__icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #eaf2fd;
+  color: #1769e0;
+}
+.ps-map {
+  width: 100%;
+  max-width: 1140px;
+  margin-inline: auto;
+}
+.ps-route {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: calc(var(--section-gap) * 0.5);
+}
+.ps-route__head {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 640px;
+  margin-inline: auto;
+  text-align: center;
+}
+.ps-route__flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.ps-route__step {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 580px;
+}
+.ps-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.ps-step b {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #0b1f3a;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+.ps-route__arrow {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #e5eaf1;
+  color: #1769e0;
+  box-shadow: 0 10px 24px -14px rgba(11, 31, 58, 0.35);
+  transform: rotate(90deg);
+}
+.ps-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+.ps-split {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.ps-split__text {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 520px;
+}
+.ps-split__visual {
+  width: 100%;
+  max-width: 600px;
+}
+.ps-ai {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+}
+.ps-ai__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.ps-ai__copy .sec-head {
+  max-width: 520px;
+}
+.ps-ai__visuals {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 620px;
+}
+@media (min-width: 810px) {
+  .ps-title {
+    font-size: 34px;
+  }
+  .ps-split__visual,
+  .ps-ai__visuals {
+    margin-inline: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .ps-route__flow {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .ps-route__step {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
+  }
+  .ps-route__arrow {
+    align-self: center;
+    margin-top: 40px;
+    transform: none;
+  }
+  .ps-rows {
+    gap: 96px;
+  }
+  .ps-split {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    align-items: center;
+    gap: 64px;
+  }
+  .ps-split--rev .ps-split__text {
+    order: 2;
+  }
+  .ps-split__visual {
+    max-width: none;
+  }
+  .ps-ai {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    align-items: start;
+    gap: 64px;
+  }
+  .ps-ai__copy {
+    position: sticky;
+    top: 120px;
+  }
+  .ps-ai__visuals {
+    max-width: none;
   }
 }
 

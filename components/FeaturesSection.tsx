@@ -1,7 +1,19 @@
-import { InlineSvg } from "@/lib/inline-svg";
 import { FEATURES } from "@/lib/content";
 import { Reveal } from "./Reveal";
 import { SectionHeader } from "./SectionHeader";
+import { AITahlilchiShowcase } from "./showcase/AITahlilchiShowcase";
+import { AnalyticsShowcase } from "./showcase/AnalyticsShowcase";
+import { CustomerIntelligenceShowcase } from "./showcase/CustomerIntelligenceShowcase";
+import { DeliveryMapShowcase } from "./showcase/DeliveryMapShowcase";
+import { ReportsShowcase } from "./showcase/ReportsShowcase";
+
+const SHOWCASES: Record<(typeof FEATURES)[number]["showcase"], React.ReactNode> = {
+  analytics: <AnalyticsShowcase frame="bare" />,
+  reports: <ReportsShowcase frame="bare" />,
+  customers: <CustomerIntelligenceShowcase frame="bare" />,
+  delivery: <DeliveryMapShowcase frame="bare" compact />,
+  ai: <AITahlilchiShowcase frame="bare" />,
+};
 
 function FeatureCard({ f, i }: { f: (typeof FEATURES)[number]; i: number }) {
   return (
@@ -10,9 +22,7 @@ function FeatureCard({ f, i }: { f: (typeof FEATURES)[number]; i: number }) {
         <h3 className="t-h4">{f.title}</h3>
         <p className="t-body">{f.text}</p>
       </div>
-      <div className="feat-card__art">
-        <InlineSvg src={f.art} />
-      </div>
+      <div className="feat-card__art">{SHOWCASES[f.showcase]}</div>
     </Reveal>
   );
 }

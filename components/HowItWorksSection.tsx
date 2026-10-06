@@ -1,10 +1,18 @@
-import { ChartNoAxesColumnIncreasing, Settings2, Truck } from "lucide-react";
-import { InlineSvg } from "@/lib/inline-svg";
+import { ClipboardList, Route, Truck } from "lucide-react";
 import { STEPS } from "@/lib/content";
 import { Reveal } from "./Reveal";
 import { SectionHeader } from "./SectionHeader";
+import { DeliveryMapShowcase } from "./showcase/DeliveryMapShowcase";
+import { OrdersShowcase } from "./showcase/OrdersShowcase";
+import { RouteOptimizationShowcase } from "./showcase/RouteOptimizationShowcase";
 
-const ICONS = [Settings2, Truck, ChartNoAxesColumnIncreasing];
+const ICONS = [ClipboardList, Truck, Route];
+
+const SHOWCASES: Record<(typeof STEPS)[number]["showcase"], React.ReactNode> = {
+  orders: <OrdersShowcase frame="bare" />,
+  delivery: <DeliveryMapShowcase frame="bare" compact />,
+  route: <RouteOptimizationShowcase frame="bare" />,
+};
 
 export function HowItWorksSection() {
   return (
@@ -14,7 +22,7 @@ export function HowItWorksSection() {
           <div className="process__head">
             <SectionHeader
               tag="Qanday ishlaydi"
-              title="Ishni boshlash uchun atigi 3 qadam."
+              title="Buyurtmadan eshikkacha — 3 qadam."
               id="process-title"
               align="left"
             />
@@ -32,9 +40,7 @@ export function HowItWorksSection() {
                       <h3 className="t-h4">{s.title}</h3>
                       <p className="t-body">{s.text}</p>
                     </div>
-                    <div className="proc-card__art">
-                      <InlineSvg src={s.art} />
-                    </div>
+                    <div className="proc-card__art">{SHOWCASES[s.showcase]}</div>
                   </div>
                   <span className="proc-card__num" aria-label={`${Number(s.n)}-qadam`}>
                     {s.n}

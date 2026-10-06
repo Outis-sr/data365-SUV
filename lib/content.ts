@@ -6,33 +6,34 @@ export const BRAND_LOGOS = [
   { src: "logos/brands/mastermail.svg", name: "Mastermail" },
 ];
 
+/** Feature grid (3 + 2); "showcase" picks the DATA365 SUV product UI shown in the card. */
 export const FEATURES = [
   {
     title: "Real vaqt tahlili",
-    text: "Buyurtma, tushum va yetkazib berishni jonli panelda kuzating.",
-    art: "features/live-analytics.svg",
+    text: "Bugungi tushum, buyurtmalar va yetkazib berish jonli grafikda.",
+    showcase: "analytics",
   },
   {
     title: "Avtomatik hisobotlar",
-    text: "Kunlik va oylik hisobotlar qo‘lda ishlamasdan tayyor bo‘ladi.",
-    art: "features/automated-reports.svg",
+    text: "Haftalik hisobot o‘zi tayyor bo‘ladi — AI xulosasi bilan.",
+    showcase: "reports",
   },
   {
-    title: "Aqlli rejalashtirish",
-    text: "Ombor, buyurtmalar va yetkazib berishni samarali rejalashtiring.",
-    art: "features/smart-budgeting.svg",
+    title: "Mijoz tahlili",
+    text: "Qayta buyurtma vaqti kelgan mijozlarni tizim o‘zi topadi.",
+    showcase: "customers",
   },
   {
-    title: "Xavfsiz sinxronlash",
-    text: "Buyurtma, mijoz, ombor va to‘lov ma’lumotlari bir tizimda yangilanadi.",
-    art: "features/secure-syncing.svg",
+    title: "Yetkazib berishni jonli kuzatish",
+    text: "Haydovchilar, marshrutlar va har bir manzil holati bitta xaritada.",
+    showcase: "delivery",
   },
   {
-    title: "O‘sish ko‘rsatkichi",
-    text: "Savdo va operatsion ko‘rsatkichlarni bir qarashda kuzating.",
-    art: "features/growth-score.svg",
+    title: "AI Tahlilchi",
+    text: "Kechikish xavfi va yangi imkoniyatlarni sizdan oldin aniqlaydi.",
+    showcase: "ai",
   },
-];
+] as const;
 
 /** Neutral category icons (no third-party brands): messenger, payments, maps, SMS, spreadsheets. */
 export const INTEGRATION_ICONS = [
@@ -46,23 +47,23 @@ export const INTEGRATION_ICONS = [
 export const STEPS = [
   {
     n: "01",
-    title: "Tizimni sozlang",
-    text: "Mijozlar, mahsulotlar, narxlar va xodimlarni kiriting.",
-    art: "features/secure-syncing.svg",
+    title: "Buyurtmani qabul qiling",
+    text: "Telefon, Telegram yoki operator orqali kelgan buyurtma darhol tizimga tushadi.",
+    showcase: "orders",
   },
   {
     n: "02",
-    title: "Buyurtmalarni boshqaring",
-    text: "Buyurtmadan yetkazib berishgacha bo‘lgan jarayonni bir joydan kuzating.",
-    art: "features/area-chart.svg",
+    title: "Yetkazib berishni boshqaring",
+    text: "Haydovchilarga buyurtma biriktiring va har birini xaritada jonli kuzating.",
+    showcase: "delivery",
   },
   {
     n: "03",
-    title: "Natijani kuzating",
-    text: "Tushum, mijozlar va operatsiyalar bo‘yicha real vaqtda natijalarni ko‘ring.",
-    art: "features/automated-reports.svg",
+    title: "Eng yaxshi marshrutni tanlang",
+    text: "Tizim manzillarni optimal ketma-ketlikka keltiradi — kamroq yo‘l, ko‘proq yetkazish.",
+    showcase: "route",
   },
-];
+] as const;
 
 /** No tariffs are defined for data365 SUV yet, so prices are "on request" rather than invented. */
 export const PLANS = [

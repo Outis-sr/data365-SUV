@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Inter_Tight } from "next/font/google";
 import "./globals.css";
+import "./showcase.css";
 
 const geist = Geist({
   subsets: ["latin"],

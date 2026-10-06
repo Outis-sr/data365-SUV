@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125 32" fill="none">
+  <path d="M6 26 22 10" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M10.5 8.8h12.7v12.7" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="30" y="21.4" font-family="Geist, 'Inter Tight', Inter, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="-0.3" fill="currentColor" textLength="84" lengthAdjust="spacingAndGlyphs">45 Degrees</text>
+  <text x="113.2" y="15.8" font-family="Geist, 'Inter Tight', Inter, Arial, sans-serif" font-size="8.6" font-weight="700" fill="currentColor" textLength="7.2" lengthAdjust="spacingAndGlyphs">®</text>
+</svg>

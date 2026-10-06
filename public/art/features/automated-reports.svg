@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 309 180" fill="none">
+  <defs>
+    <linearGradient id="automated-reports-area" gradientUnits="userSpaceOnUse" x1="0" y1="30" x2="0" y2="157">
+      <stop offset="0" stop-color="#659BFF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#659BFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <line x1="0" y1="51" x2="309" y2="51" stroke="#CCC" stroke-width="0.525" stroke-dasharray="3.15 3.15"/>
+  <path d="M0 135C10 131 20 127 30 127C42.67 127 55.33 133.06 68 136C82.67 139.41 97.33 146 112 146C121.33 146 130.67 142.68 140 138C150 132.98 160 124.51 170 116C179.67 107.77 189.33 96.39 199 88C210 78.45 221 70.29 232 63C244.67 54.61 257.33 47.47 270 42C283 36.39 296 33.19 309 30L309 157L0 157Z" fill="url(#automated-reports-area)"/>
+  <line x1="199" y1="88" x2="199" y2="157" stroke="#D9D9D9" stroke-width="1"/>
+  <path d="M0 135C10 131 20 127 30 127C42.67 127 55.33 133.06 68 136C82.67 139.41 97.33 146 112 146C121.33 146 130.67 142.68 140 138C150 132.98 160 124.51 170 116C179.67 107.77 189.33 96.39 199 88C210 78.45 221 70.29 232 63C244.67 54.61 257.33 47.47 270 42C283 36.39 296 33.19 309 30" stroke="#659BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="199" cy="88" r="7" fill="#fff"/>
+  <circle cx="199" cy="88" r="5" fill="#4686FE"/>
+</svg>

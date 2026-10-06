@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 309 180" fill="none">
+  <defs>
+    <linearGradient id="growth-score-blue" gradientUnits="userSpaceOnUse" x1="0" y1="154" x2="126" y2="40">
+      <stop offset="0" stop-color="#4686FE"/>
+      <stop offset="1" stop-color="#659BFF"/>
+    </linearGradient>
+    <clipPath id="growth-score-clip-blue"><path d="M29.47 -225.96L276.68 534.89L-103.74 658.49L-350.96 -102.35Z"/></clipPath>
+    <clipPath id="growth-score-clip-grey"><path d="M32.32 -226.89L279.53 533.96L659.96 410.35L412.74 -350.49Z"/></clipPath>
+  </defs>
+  <path d="M0.5 154A154 154 0 0 1 308.5 154L246.5 154A92 92 0 0 0 62.5 154Z" fill="#E9ECF1" clip-path="url(#growth-score-clip-grey)"/>
+  <path d="M0.5 154A154 154 0 0 1 308.5 154L246.5 154A92 92 0 0 0 62.5 154Z" fill="url(#growth-score-blue)" clip-path="url(#growth-score-clip-blue)"/>
+  <text x="154.5" y="168" text-anchor="middle" font-family="Geist, Inter, Arial, sans-serif" font-size="40" font-weight="600" letter-spacing="-0.8" fill="#555">58</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 32" fill="none">
+  <g stroke="currentColor" stroke-linecap="round" stroke-width="2.9">
+    <path d="M13.5 5v6.2"/>
+    <path d="M13.5 5v6.2" transform="rotate(45 13.5 16)"/>
+    <path d="M13.5 5v6.2" transform="rotate(90 13.5 16)"/>
+    <path d="M13.5 5v6.2" transform="rotate(135 13.5 16)"/>
+    <path d="M13.5 5v6.2" transform="rotate(180 13.5 16)"/>
+    <path d="M13.5 5v6.2" transform="rotate(225 13.5 16)"/>
+    <path d="M13.5 5v6.2" transform="rotate(270 13.5 16)"/>
+    <path d="M13.5 5v6.2" transform="rotate(315 13.5 16)"/>
+  </g>
+  <text x="34" y="21.5" font-family="Geist, 'Inter Tight', Inter, Arial, sans-serif" font-size="15.5" font-weight="700" letter-spacing="-0.31" fill="currentColor" textLength="98" lengthAdjust="spacingAndGlyphs">Convergence</text>
+</svg>

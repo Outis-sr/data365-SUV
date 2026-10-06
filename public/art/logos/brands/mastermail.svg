@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 123 32" fill="none">
+  <g fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linejoin="round">
+    <path d="M13 4.8 17.6 9.4 13 14 8.4 9.4Z"/>
+    <path d="M13 18 17.6 22.6 13 27.2 8.4 22.6Z"/>
+    <path d="M6.4 11.4 11 16 6.4 20.6 1.8 16Z"/>
+    <path d="M19.6 11.4 24.2 16 19.6 20.6 15 16Z"/>
+  </g>
+  <text x="31.5" y="22.1" font-family="Geist, 'Inter Tight', Inter, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="-0.34" fill="currentColor" textLength="88" lengthAdjust="spacingAndGlyphs">Mastermail</text>
+</svg>
